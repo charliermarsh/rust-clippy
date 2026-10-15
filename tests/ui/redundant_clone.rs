@@ -387,3 +387,12 @@ mod issue16096 {
         Some(t)
     }
 }
+
+fn literal_receivers() {
+    let _ = "literal".to_owned();
+    let _ = "literal".to_string();
+    let _ = b"bytes".to_owned();
+    let _ = c"ffi".to_owned();
+    let _ = 42_u8.to_string();
+    let _ = || "closure literal".to_string();
+}
